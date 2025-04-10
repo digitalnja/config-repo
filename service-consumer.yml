@@ -8,7 +8,7 @@ spring:
       group-id: user-consumer-group
       auto-offset-reset: earliest
   datasource:
-    url: jdbc:postgresql://localhost:5432/users
+    url: jdbc:postgresql://localhost:5435/users
     username: user
     password: pass
   jpa:
