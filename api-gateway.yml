@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: employee-service-route
+          uri: http://employee-service:8080  # Это URL твоего employee-service
+          predicates:
+            - Path=/api/employees/**  # Проксиируем все запросы с /api/employees/**
+          filters:
+            - StripPrefix=2  # Убираем первые 2 сегмента пути (если требуется)
