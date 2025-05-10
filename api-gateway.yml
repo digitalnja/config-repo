@@ -6,6 +6,5 @@ spring:
           uri: http://localhost:8080  # Это URL твоего employee-service
           predicates:
             - Path=/api/employees/**  # Проксиируем все запросы с /api/employees/**
-          filters:
-            - StripPrefix=2
+         
           
