@@ -3,7 +3,9 @@ spring:
     gateway:
       routes:
         - id: employee-service-route
-          uri: http://employee-service:8080  # Это URL твоего employee-service
+          uri: http://localhost:8080  # Это URL твоего employee-service
           predicates:
             - Path=/api/employees/**  # Проксиируем все запросы с /api/employees/**
+          filters:
+            - StripPrefix=2
           
